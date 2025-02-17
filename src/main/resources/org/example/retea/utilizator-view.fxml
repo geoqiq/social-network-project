@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="573.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.retea.controller.UtilizatorController">
+    <children>
+        <VBox layoutY="34.0" prefHeight="527.0" prefWidth="258.0" spacing="10.0" style="-fx-padding: 10; -fx-background-color: #f0f8ff; -fx-border-color: #dcdcdc; -fx-border-width: 1;">
+            <children>
+                <Label alignment="CENTER" prefHeight="18.0" prefWidth="339.0" text="Cereri de prietenie primite:" textAlignment="CENTER" style="-fx-font-size: 16px; -fx-font-weight: bold;">
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                    </VBox.margin>
+                </Label>
+                <TableView fx:id="tabelPrietenii" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn fx:id="colNumeUtil" prefWidth="97.0" text="Utilizator" />
+                        <TableColumn fx:id="colStatus" prefWidth="115.0" text="Actiuni" />
+                    </columns>
+                    <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                    </VBox.margin>
+                </TableView>
+                <Label alignment="CENTER" prefHeight="18.0" prefWidth="357.0" text="Poate ii cunoasteti:" style="-fx-font-size: 16px; -fx-font-weight: bold;">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+                <TableView fx:id="TabelInvitatii" prefHeight="230.0" prefWidth="237.0">
+                    <columns>
+                        <TableColumn fx:id="colNumeUtilInvitat" prefWidth="112.0" text="Utilizator" />
+                        <TableColumn fx:id="colInvita" prefWidth="87.0" text="Actiuni" />
+                    </columns>
+                    <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                </TableView>
+            </children>
+        </VBox>
+        <Label fx:id="labelNumeUtil" alignment="CENTER" layoutY="14.0" prefHeight="18.0" prefWidth="900.0" text="Esti autentificat ca: Username" textAlignment="CENTER" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+        <VBox layoutX="271.0" layoutY="40.0" prefHeight="527.0" prefWidth="600.0" spacing="10.0" style="-fx-padding: 10; -fx-background-color: #f0f8ff; -fx-border-color: #dcdcdc; -fx-border-width: 1;">
+            <children>
+                <HBox prefHeight="37.0" prefWidth="600.0" spacing="10.0">
+                    <children>
+                        <Label text="Converseaza cu prietenii tai:" style="-fx-font-size: 14px;" />
+                        <ComboBox fx:id="prieteniCB" prefWidth="200.0" />
+                        <Button fx:id="butonDeschidereConversatie" mnemonicParsing="false" onAction="#handleMessagePanelClicks" prefHeight="26.0" prefWidth="180.0" text="Deschide conversatia" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" />
+                    </children>
+                </HBox>
+                <TextArea fx:id="textAreaMesaje" prefHeight="367.0" prefWidth="600.0" style="-fx-font-size: 14px;" />
+                <HBox prefHeight="20.0" prefWidth="600.0" spacing="10.0">
+                    <children>
+                        <GridPane prefHeight="38.0" prefWidth="600.0" hgap="10" vgap="10">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                            </columnConstraints>
+                            <children>
+                                <Label prefHeight="18.0" prefWidth="170.0" text="Raspuns la mesajul cu id:" GridPane.rowIndex="1" style="-fx-font-size: 14px;" />
+                                <TextField fx:id="inputIdMesajRaspuns" prefHeight="26.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <Button fx:id="butonTrimiteMesaje" alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#handleMessagePanelClicks" prefHeight="26.0" prefWidth="190.0" text="Trimite mai multor prieteni" textAlignment="RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="1" style="-fx-background-color: #2196F3; -fx-text-fill: white;" />
+                                <Button fx:id="butonTrimiteMesaj" alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#handleMessagePanelClicks" prefHeight="26.0" prefWidth="80.0" text="Trimite" textAlignment="RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="1" style="-fx-background-color: #2196F3; -fx-text-fill: white;" />
+                            </children>
+                        </GridPane>
+                    </children>
+                </HBox>
+                <TextArea fx:id="inputMesaj" prefHeight="69.0" prefWidth="600.0" style="-fx-font-size: 14px;" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

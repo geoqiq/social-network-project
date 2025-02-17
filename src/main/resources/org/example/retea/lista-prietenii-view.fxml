@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="346.0" prefWidth="291.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.retea.controller.ListaPrieteniiController">
+   <children>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="341.0" prefWidth="264.0" spacing="10.0" style="-fx-padding: 10; -fx-background-color: #f0f8ff; -fx-border-color: #dcdcdc; -fx-border-width: 1;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="283.0" text="Selecteaza prietenii" textAlignment="CENTER" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+            <ListView fx:id="listaPrieteni" prefHeight="258.0" prefWidth="264.0" style="-fx-background-color: #ffffff; -fx-border-color: #dcdcdc; -fx-border-width: 1;">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </ListView>
+            <Button fx:id="btnTrimitereMesaje" mnemonicParsing="false" onAction="#handleUserPanelClicks" text="Trimite" style="-fx-background-color: #4CAF50; -fx-text-fill: white;">
+               <VBox.margin>
+                  <Insets left="100.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
